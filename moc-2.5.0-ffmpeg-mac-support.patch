@@ -1,0 +1,21 @@
+--- moc/decoder_plugins/ffmpeg/ffmpeg.c.orig
++++ moc/decoder_plugins/ffmpeg/ffmpeg.c
+@@ -352,6 +352,8 @@ static void ffmpeg_get_name (const char *file, char buf[4])
+ 		strcpy (buf, "MP4");
+ 	else if (!strcasecmp(ext, "m4a"))
+ 		strcpy (buf, "M4A");
++	else if (!strcasecmp(ext, "ape"))
++		strcpy (buf, "APE");
+ }
+ 
+ static int ffmpeg_our_format_ext (const char *ext)
+@@ -359,7 +361,8 @@ static int ffmpeg_our_format_ext (const char *ext)
+ 	return !strcasecmp(ext, "wma")
+ 		|| !strcasecmp(ext, "ra")
+ 		|| !strcasecmp(ext, "m4a")
+-		|| !strcasecmp(ext, "mp4");
++		|| !strcasecmp(ext, "mp4")
++		|| !strcasecmp(ext, "ape");
+ }
+ 
+ static void ffmpeg_get_error (void *prv_data, struct decoder_error *error)
