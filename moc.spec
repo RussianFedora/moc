@@ -1,7 +1,7 @@
-Summary:	MOC (music on console) is a console audio player for LINUX/UNIX
 Name:		moc
 Version:	2.5.0
 Release:	0.2.%{rev}%{?dist}
+Summary:        Music on console
 
 License:	GPL
 URL:		http://moc.daper.net/
@@ -38,8 +38,8 @@ BuildRequires:	wavpack-devel
 BuildRequires:	zlib-devel
 
 %description
-MOC (music on console) is a console audio player for 
-LINUX/UNIX designed to be powerful and easy to use.
+MOC (music on console) is a console audio player for LINUX/UNIX
+designed to be powerful and easy to use.
 
 %prep
 %setup -q -n %{name}-%{version}-%{rev}
