@@ -43,8 +43,31 @@ designed to be powerful and easy to use.
 %setup -q -n %{name}-%{version}-%{rev}
 
 %build
-%configure
-make %{?_smp_mflags}
+%configure \
+       --with-aac \
+       --with-alsa \
+       --with-curl \
+       --with-ffmpeg \
+       --with-flac \
+       --with-jack \
+       --with-magic \
+       --with-modplug \
+       --with-mp3 \
+       --with-musepack \
+       --with-ncurses \
+       --without-ncursesw \
+       --with-oss \
+       --with-rcc \
+       --with-samplerate \
+       --without-sidplay2 \
+       --with-sndfile \
+       --without-sndio \
+       --with-speex \
+       --with-timidity \
+       --with-vorbis \
+       --with-wavpack 
+       
+%make_build V=1
 
 %install
 %make_install
