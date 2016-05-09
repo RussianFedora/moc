@@ -1,4 +1,5 @@
 Name:		moc
+Epoch:          1
 Version:	2.5.0
 Release:	0.2.%{rev}%{?dist}
 Summary:        Music on console
@@ -6,7 +7,9 @@ Summary:        Music on console
 License:        GPLv2+
 URL:		http://moc.daper.net/
 Source0:	ftp://ftp.daper.net/pub/soft/moc/stable/%{name}-%{version}-%{rev}.tar.bz2
-
+# Fix rpmlint E: incorrect-fsf-address
+Patch0:         trivial-update-FSF-address.patch
+# Main dependencies
 BuildRequires:  alsa-lib-devel
 BuildRequires:  faad2-devel
 BuildRequires:  ffmpeg-devel
