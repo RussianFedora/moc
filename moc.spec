@@ -3,7 +3,7 @@ Version:	2.5.0
 Release:	0.2.%{rev}%{?dist}
 Summary:        Music on console
 
-License:	GPL
+License:        GPLv2+
 URL:		http://moc.daper.net/
 Source0:	ftp://ftp.daper.net/pub/soft/moc/stable/%{name}-%{version}-%{rev}.tar.bz2
 
