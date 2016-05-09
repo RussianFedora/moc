@@ -7,35 +7,33 @@ License:        GPLv2+
 URL:		http://moc.daper.net/
 Source0:	ftp://ftp.daper.net/pub/soft/moc/stable/%{name}-%{version}-%{rev}.tar.bz2
 
-BuildRequires:	libtool
-BuildRequires:  automake
-BuildRequires:	autoconf
-BuildRequires:	alsa-lib-devel
-BuildRequires:	curl-devel
-BuildRequires:	db4-devel
-BuildRequires:	faad2-devel
-BuildRequires:	ffmpeg-devel
-BuildRequires:	flac-devel
-BuildRequires:	jack-audio-connection-kit-devel
-BuildRequires:	lame-devel
+BuildRequires:  alsa-lib-devel
+BuildRequires:  faad2-devel
+BuildRequires:  ffmpeg-devel
+BuildRequires:  file-devel
+BuildRequires:  flac-devel
+BuildRequires:  jack-audio-connection-kit-devel
+BuildRequires:  libao-devel
+BuildRequires:  libcurl-devel
+BuildRequires:  libdb-devel
 BuildRequires:  libid3tag-devel
-BuildRequires:	libmad-devel
-BuildRequires:	libmodplug-devel
-BuildRequires:	libmpcdec-devel
-BuildRequires:	libogg-devel
-BuildRequires:	librcc-devel
-BuildRequires:	libsamplerate-devel
-BuildRequires:	libsndfile-devel
-# It pull 91M of some shit. Does it really need?
-#BuildRequires:	libtimidity-devel
-BuildRequires:	libtool-ltdl-devel
+BuildRequires:  libmad-devel
+BuildRequires:  libmodplug-devel
+BuildRequires:  libmpcdec-devel
+BuildRequires:  libogg-devel
+BuildRequires:  librcc-devel
+BuildRequires:  libsamplerate-devel
+BuildRequires:  libsndfile-devel
+BuildRequires:  libtimidity-devel
+BuildRequires:  libtool
+BuildRequires:  libtool-ltdl-devel
 BuildRequires:  libvorbis-devel
-BuildRequires:	ncurses-devel
-BuildRequires:	sidplay-libs-devel
-BuildRequires:	speex-devel
-BuildRequires:	taglib-devel
-BuildRequires:	wavpack-devel
-BuildRequires:	zlib-devel
+BuildRequires:  ncurses-devel
+BuildRequires:  popt-devel
+BuildRequires:  speex-devel
+BuildRequires:  taglib-devel
+BuildRequires:  wavpack-devel
+BuildRequires:  zlib-devel
 
 %description
 MOC (music on console) is a console audio player for LINUX/UNIX
