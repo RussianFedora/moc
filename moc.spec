@@ -1,12 +1,14 @@
-Name:		moc
+%undefine _hardened_build
+
+Name:           moc
 Epoch:          1
-Version:	2.5.0
-Release:	0.2.%{rev}%{?dist}
+Version:        2.6
+Release:        0.1.alpha2%{?dist}
 Summary:        Music on console
 
 License:        GPLv2+
-URL:		http://moc.daper.net/
-Source0:	ftp://ftp.daper.net/pub/soft/moc/stable/%{name}-%{version}-%{rev}.tar.bz2
+URL:            http://moc.daper.net/
+Source0:        http://ftp.daper.net/pub/soft/%{name}/unstable/%{name}-%{version}-alpha2.tar.xz
 # Fix rpmlint E: incorrect-fsf-address
 Patch0:         trivial-update-FSF-address.patch
 # Main dependencies
@@ -74,17 +76,22 @@ designed to be powerful and easy to use.
 
 %install
 %make_install
-rm -rf %{buildroot}%{_datadir}/doc
+
+%{__rm} -r %{buildroot}%{_docdir}/%{name}
+%{__rm} -r %{buildroot}%{_libdir}/%{name}/decoder_plugins/lib*.la
 
 %files
 %doc AUTHORS README* config.example.in keymap.example
 %license COPYING
-%{_bindir}/mocp
-%{_libdir}/moc/
-%{_mandir}/man?/*
-%{_datadir}/moc/
+%{_bindir}/%{name}p
+%{_datadir}/%{name}
+%{_libdir}/%{name}/decoder_plugins/lib*.so
+%{_mandir}/man1/%{name}p.1.*
 
 %changelog
+* Mon May 09 2016 Maxim Orlov <murmansksity@gmail.com> - 1:2.6-0.1.alpha2.R
+- Update to 2.6-alpha2
+
 * Thu Nov  4 2010 Arkady L. Shane <ashejn@yandex-team.ru> - 2.5.0-0.2.20101030svn2252
 - update to last snapshot
 
