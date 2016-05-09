@@ -43,7 +43,7 @@ MOC (music on console) is a console audio player for LINUX/UNIX
 designed to be powerful and easy to use.
 
 %prep
-%setup -q -n %{name}-%{version}-%{rev}
+%autosetup -n %{name}-%{version}-alpha2 -p1
 
 %build
 %configure \
