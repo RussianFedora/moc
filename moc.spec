@@ -46,9 +46,8 @@ designed to be powerful and easy to use.
 %configure
 make %{?_smp_mflags}
 
-
 %install
-make install DESTDIR=%{buildroot}
+%make_install
 rm -rf %{buildroot}%{_datadir}/doc
 
 %files
