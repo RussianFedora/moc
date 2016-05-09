@@ -51,7 +51,8 @@ make %{?_smp_mflags}
 rm -rf %{buildroot}%{_datadir}/doc
 
 %files
-%doc AUTHORS COPYING NEWS README TODO config.example keymap.example
+%doc AUTHORS README* config.example.in keymap.example
+%license COPYING
 %{_bindir}/mocp
 %{_libdir}/moc/
 %{_mandir}/man?/*
