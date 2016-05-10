@@ -4,7 +4,7 @@ Name:           moc
 Epoch:          1
 Version:        2.6
 Release:        0.1.alpha2%{?dist}
-Summary:        Music on console
+Summary:        Music On Console
 
 License:        GPLv2+
 URL:            http://moc.daper.net/
