@@ -12,33 +12,33 @@ Source0:        http://ftp.daper.net/pub/soft/%{name}/unstable/%{name}-%{version
 # Fix rpmlint E: incorrect-fsf-address
 Patch0:         trivial-update-FSF-address.patch
 # Main dependencies
-BuildRequires:  alsa-lib-devel
+BuildRequires:  pkgconfig(alsa)
+BuildRequires:  pkgconfig(ao)
 BuildRequires:  faad2-devel
 BuildRequires:  ffmpeg-devel
 BuildRequires:  file-devel
-BuildRequires:  flac-devel
-BuildRequires:  jack-audio-connection-kit-devel
-BuildRequires:  libao-devel
-BuildRequires:  libcurl-devel
+BuildRequires:  pkgconfig(flac)
+BuildRequires:  pkgconfig(jack)
+BuildRequires:  pkgconfig(id3tag)
+BuildRequires:  pkgconfig(libcurl)
 BuildRequires:  libdb-devel
-BuildRequires:  libid3tag-devel
-BuildRequires:  libmad-devel
-BuildRequires:  libmodplug-devel
 BuildRequires:  libmpcdec-devel
-BuildRequires:  libogg-devel
-BuildRequires:  librcc-devel
-BuildRequires:  libsamplerate-devel
-BuildRequires:  libsndfile-devel
-BuildRequires:  libtimidity-devel
+BuildRequires:  pkgconfig(libmodplug)
+BuildRequires:  pkgconfig(librcc)
+BuildRequires:  pkgconfig(libtimidity)
 BuildRequires:  libtool
 BuildRequires:  libtool-ltdl-devel
-BuildRequires:  libvorbis-devel
-BuildRequires:  ncurses-devel
-BuildRequires:  popt-devel
-BuildRequires:  speex-devel
-BuildRequires:  taglib-devel
-BuildRequires:  wavpack-devel
-BuildRequires:  zlib-devel
+BuildRequires:  pkgconfig(mad)
+BuildRequires:  pkgconfig(ncurses)
+BuildRequires:  pkgconfig(ogg)
+BuildRequires:  pkgconfig(popt)
+BuildRequires:  pkgconfig(samplerate)
+BuildRequires:  pkgconfig(sndfile)
+BuildRequires:  pkgconfig(speex)
+BuildRequires:  pkgconfig(taglib)
+BuildRequires:  pkgconfig(vorbis)
+BuildRequires:  pkgconfig(wavpack)
+BuildRequires:  pkgconfig(zlib)
 
 %description
 MOC (music on console) is a console audio player for LINUX/UNIX
@@ -89,6 +89,7 @@ designed to be powerful and easy to use.
 
 %changelog
 * Fri May 27 2016 Maxim Orlov <murmansksity@gmail.com> - 1:2.6-0.2.alpha2.R
+- Use pkgconfig for BR
 - Remove --without-ncursesw
 
 * Mon May 09 2016 Maxim Orlov <murmansksity@gmail.com> - 1:2.6-0.1.alpha2.R
