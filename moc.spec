@@ -3,7 +3,7 @@
 Name:           moc
 Epoch:          1
 Version:        2.6
-Release:        0.1.alpha2%{?dist}
+Release:        0.2.alpha2%{?dist}
 Summary:        Music On Console
 
 License:        GPLv2+
@@ -60,7 +60,6 @@ designed to be powerful and easy to use.
        --with-mp3 \
        --with-musepack \
        --with-ncurses \
-       --without-ncursesw \
        --with-oss \
        --with-rcc \
        --with-samplerate \
@@ -89,6 +88,9 @@ designed to be powerful and easy to use.
 %{_mandir}/man1/%{name}p.1.*
 
 %changelog
+* Fri May 27 2016 Maxim Orlov <murmansksity@gmail.com> - 1:2.6-0.2.alpha2.R
+- Remove --without-ncursesw
+
 * Mon May 09 2016 Maxim Orlov <murmansksity@gmail.com> - 1:2.6-0.1.alpha2.R
 - Update to 2.6-alpha2
 
