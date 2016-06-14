@@ -3,7 +3,7 @@
 Name:           moc
 Epoch:          1
 Version:        2.6
-Release:        0.2.alpha2%{?dist}
+Release:        0.3.alpha2%{?dist}
 Summary:        Music On Console
 
 License:        GPLv2+
@@ -88,6 +88,9 @@ designed to be powerful and easy to use.
 %{_mandir}/man1/%{name}p.1.*
 
 %changelog
+* Tue Jun 14 2016 Arkady L. Shane <ashejn@russianfedora.pro> - 1:2.6-0.2.alpha3.R
+- rebuilt against new ffmpeg
+
 * Fri May 27 2016 Maxim Orlov <murmansksity@gmail.com> - 1:2.6-0.2.alpha2.R
 - Use pkgconfig for BR
 - Remove --without-ncursesw
